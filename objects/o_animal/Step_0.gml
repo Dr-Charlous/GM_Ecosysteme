@@ -5,7 +5,6 @@ Collision();
 Script();
 
 
-
 //DRINKING
 if place_meeting(x,y,o_water) and water > 0 {
 	water -= 0.5;
@@ -21,7 +20,7 @@ if water <= 10 {
 if place_meeting(x,y,o_vegetable) and food > 0 {
 	food -= 0.5;
 } else {
-	food += 0.05;
+	food += 0.075;
 }
 if food <= 10 {
 	food_full = true;
@@ -38,7 +37,7 @@ if (place_meeting(x,y,o_water) and water>10) or (place_meeting(x,y,o_vegetable) 
 }
 	
 //GO WATER
-if !water_full and water > food {
+if water > food {
 	var path = path_add();
 	if mp_grid_path(grid, path, x, y, instance_nearest(x,y,o_water).x, instance_nearest(x, y, o_water).y, 1) {
 		path_start(path, vitesse, 0, 0);
@@ -46,7 +45,7 @@ if !water_full and water > food {
 }
 
 //GO FOOD
-if !food_full and food > water {
+if food > water {
 	var path = path_add();
 	if mp_grid_path(grid, path, x, y, instance_nearest(x,y,o_vegetable).x, instance_nearest(x, y, o_vegetable).y, 1) {
 		path_start(path, vitesse, 0, 0);

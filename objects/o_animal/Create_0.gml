@@ -8,7 +8,7 @@ vitesse = vitesse_org;
 vision = 40;
 
 //ALIM
-water = 10;
+water = 0;
 water_full = false;
-food = 10;
+food = 1;
 food_full = false;
