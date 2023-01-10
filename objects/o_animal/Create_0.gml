@@ -5,6 +5,7 @@ mp_grid_add_instances(grid, o_wall, false);
 //STATS
 vitesse_org = 1.2;
 vitesse = vitesse_org;
+vision = 40;
 
 //ALIM
 water = 10;
