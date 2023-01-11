@@ -7,7 +7,7 @@ Script();
 
 //DRINKING
 if place_meeting(x,y,o_water) and water > 0 {
-	water -= 0.5;
+	water -= 0.25;
 } else {
 	water += 0.01;
 }
@@ -18,7 +18,7 @@ if water <= 10 {
 
 //EATING
 if place_meeting(x,y,o_vegetable) and food > 0 {
-	food -= 0.5;
+	food -= 0.25;
 } else {
 	food += 0.002;
 }
