@@ -3,8 +3,8 @@ randomize();
 grid = mp_grid_create(0, 0, room_width div 32, room_height div 32, 32, 32);
 mp_grid_add_instances(grid, o_wall, false);
 alarm_set(1, 10);
-x_random = irandom_range(10,400);
-y_random = irandom_range(10,400);
+x_random = irandom_range(0,1000);
+y_random = irandom_range(0,1000);
 
 //STATS
 vitesse_org = 1.2;

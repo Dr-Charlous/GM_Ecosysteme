@@ -62,3 +62,18 @@ if food > water and food > 50 {
 		path_end();
 	}
 }
+
+//RANDOM POS
+var path = path_add();
+if position_meeting(x_random, y_random, o_wall) {
+	x_random = irandom_range(0,1000);
+	y_random = irandom_range(0,1000);
+} else {
+	mp_grid_path(grid, path, x, y, x_random, y_random, 1)
+	if path_end() == true {
+		x_random = irandom_range(0,1000);
+		y_random = irandom_range(0,1000);
+	} else {
+		path_start(path, vitesse, 0, 0);
+	}
+}
