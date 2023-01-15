@@ -1,6 +1,6 @@
 randomize();
 
-//Collision();
+Collision();
 
 //MOVE CONTROL MOUSE
 Script();
@@ -66,11 +66,12 @@ if food > water and food > 50 {
 
 
 //RANDOM POS
-if mp_grid_get_cell(grid,x_random,y_random) == -1 {
-	x_random = irandom_range(0,32);
-	y_random = irandom_range(0,32);
-} else {
-	var path = path_add();
-	mp_grid_path(grid, path, x, y, x_random, y_random, 1);
-	path_start(path, vitesse, 0, 0);
-}
+//if mp_grid_get_cell(grid,x_random,y_random) == -1 {
+//	if path_positionprevious == path_position {
+//		x_random = irandom_range(0,room_width div 32);
+//		y_random = irandom_range(0,room_height div 32);
+//} else {
+//	var path = path_add();
+//	mp_grid_path(grid, path, x, y, x_random*room_width div 32, y_random*room_height div 32, 1);
+//	path_start(path, vitesse, 0, 0);
+//}

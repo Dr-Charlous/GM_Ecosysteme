@@ -15,5 +15,5 @@ food = 1;
 food_full = false;
 
 
-x_random = irandom_range(0,32);
-y_random = irandom_range(0,32);
+//x_random = irandom_range(0,room_width div 32);
+//y_random = irandom_range(0,room_height div 32);
